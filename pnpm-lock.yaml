@@ -17,9 +17,6 @@ importers:
       '@slidev/theme-seriph':
         specifier: latest
         version: 0.25.0
-      fs-extra:
-        specifier: ^11.2.0
-        version: 11.3.1
 
 packages:
 
