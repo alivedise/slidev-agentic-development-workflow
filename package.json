@@ -6,7 +6,7 @@
     "build": "slidev build",
     "dev": "slidev",
     "preview": "slidev --port 3030",
-    "sync": "cp /Users/alive/Projects/alivedise-dev/proposals/agentic-coding-workflow-slides-2025.md slides.md"
+    "sync": "cp /Users/alive/Projects/alivedise-dev/proposals/agentic-coding-workflow-slides-2025.md slides.md && cp /Users/alive/Projects/alivedise-dev/proposals/*.png ."
   },
   "packageManager": "pnpm@9.0.0",
   "devDependencies": {

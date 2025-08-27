@@ -33,6 +33,8 @@ mdc: true
 
 > 甚至可以說是嚴苛的
 
+> - 根據我認為可靠的提升數字約在 30% - 60%
+
 </v-clicks>
 
 ---
@@ -74,6 +76,8 @@ mdc: true
 # Context Engineering
 
 <v-clicks>
+
+> 尋求，定義並遵循人與 AI 之間的 API
 
 - 從寫程式轉向寫文件
   - 現在雖然有文件但是不是 SSOT, 沒有更新又散落各地
@@ -122,7 +126,7 @@ mdc: true
 > 在深入分析了這些問題之後，我們發現根本原因在於，像我們這樣的節奏緊湊新創公司，人們沒有時間和動力去做專案管理。對於團隊中所有職能部門（專案經理、產品開發、工程師）來說，總有比這更重要的任務。因此，這構成了一種影響每個人卻無法改變的隱患，最終導致惡性循環。
 
 我的理解：
-* 因為沒有時間 => 總是在做一些 Output First 的工作，最終導致更沒有時間打磨 Input(Context)
+* 總是在做一些 Output First 的工作，因此沒有時間打磨 Input(Context)
 * Agent 出現後，產出 Output 的角色從 Human 轉為 AI，我們終於得以騰出時間
 
 
@@ -130,35 +134,15 @@ mdc: true
 
 # Context Engineering Workflow
 
-```mermaid
-flowchart LR
-    A[Understand requirements] --> B[Design the Context]
-    B --> C[Structure the Context]
-    C --> D[Create a detailed PRD]
-    D --> E[Validate the context]
-    E --> F[Review the AI Response]
-    F --> G[Outcome Evaluation]
-    G --> H{Satisfactory?}
-    H -->|No| I[Context Refinement]
-    I --> C
-    H -->|Yes| J[Context Deployment]
-    
-    style I fill:#ff6b6b
-    style A fill:#e3f2fd
-    style B fill:#e3f2fd
-    style C fill:#e3f2fd
-    style D fill:#e3f2fd
-    style E fill:#e3f2fd
-    style F fill:#e3f2fd
-    style G fill:#e3f2fd
-    style J fill:#e3f2fd
-    style H fill:#e1f5fe
-```
+![Context Engineering Workflow](./ctxengflow.png)
 
 * 不可發散，永遠要回頭更新規格
 * 寫規範性的規格
   - 如果曾經過去嘗試 Spec First 失敗了，那代表規格本身並不具備執行性
   - AI 是檢查可執行性的重要角色
+* 預期難點：
+  - 寫出結構性上下文
+  - 執行後 refine 上下文形成正向循環
 
 ---
 
@@ -170,6 +154,11 @@ flowchart LR
 - 知識問題：沒有足夠知識背景可以 review
 
 ---
+layout: image-right
+image: ./stone.png
+backgroundSize: 20em 50%
+---
+
 
 # Possible Challenges
 
@@ -192,10 +181,15 @@ flowchart LR
 
 1. 使用正確的工具
 2. 使用正確的做法
-3. 維持正確的心態
-
 > 1 和 2 之間其實有個巨大的 GAP
 >- 現在很多單一個體可能多少有在使用 ai 輔助，但沒有人去試著把點連成線構成面的話對最終結果影響不大
+
+##  如果只是換工具但不教人怎麼用釣竿會發生什麼？
+
+> - 根據私下了解，已經發現多個工程師只會依賴 AI generation 不做審查也不做自我提升
+> - 現在其實花蠻多力氣在更正這些 AI produced garbage
+3. 維持正確的心態
+
 
 </v-clicks>
 
@@ -222,7 +216,30 @@ flowchart LR
 
 * 多人同時運作的情況？
   - 維持原本的做法：各職能各自維護自己的 Context，以及 review 自己職能在 AI 上產出的 Output
-  - 縮減團隊規模：TBD
+     - 很顯然的需要跨團隊坐下來討論 Context
+  - 縮減團隊規模/把界線模糊化：TBD
+
+* DevOps 跟 韌體 也適用嗎？
+  - 需要該領域的專家跳下來研究，我無法斷言，但 DevOps 我認為有機會
+
+* 為什麼只有 30% 的提升？
+  - 以前可能花 99% 的時間去執行錯誤的方向，現在花更少時間做方向探索回頭矯正，就算最後總時間超過以前也比花很多時間去只做一個錯誤的方向好
+  - 一開始一定要前期投入適應跟訓練
+
+</v-clicks>
+
+---
+
+# Q&A (CONT.)
+
+<v-clicks>
+
+* PM 等非研發職真的需要這麼強的工具嗎？
+  - IMO，最後所有職能界線都會模糊化
+  - PM 不該自我定義成只會產出 PRD 的角色
+  - 我們其實缺乏很多內部工具，過去總是告訴自己沒時間做，沒資源做
+  - 所有人 - 包含掛有 Product 名稱的 PM - 都應該利用這些 AI 工具賦能自己快速打造內部產品
+  - 透過這個過程更加了解需求與產出的關係，以及用這個工具再賦能給其他職能
 
 </v-clicks>
 
