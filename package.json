@@ -1,0 +1,20 @@
+{
+  "name": "slidev-agentic-development-workflow",
+  "version": "1.0.0",
+  "description": "Slidev presentation for Agentic Development Workflow Proposal 2025",
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "preview": "slidev --port 3030",
+    "sync": "cp /Users/alive/Projects/alivedise-dev/proposals/agentic-coding-workflow-slides-2025.md slides.md"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "devDependencies": {
+    "@slidev/cli": "^0.49.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
